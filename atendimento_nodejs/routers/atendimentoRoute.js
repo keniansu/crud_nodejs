@@ -8,5 +8,17 @@ router.get("/atendimentos", (req, res) => {
 });
 
 router.post("/atendimentos", (req, res) => {
-    res.send("Chegou aqui, estamos criando um novo")
+    res.send("Chegou aqui, estamos criando um novo");
 });
+
+router.put("/atendimento/:id", (req, res) => {
+    const { id } = req.params;
+    res.send(`Chegou aqui, estamos atualizando o atendimento ${id}...`);
+});
+
+router.delete("/atendimento/:id", (req, res) => {
+    const { id } = req.params;
+    res.send("Chegou aqui, estamos criando um novo atendimento " + id + "...");
+});
+
+module.exports = router;
